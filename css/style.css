@@ -75,17 +75,19 @@ nav a:hover {
 }
 
 .dropdown-content {
-  display: none;
+  /* display: none; */
   position: absolute;
+  visibility: hidden;
   min-width: 100%;
-  background-color: rgb(245, 245, 245);
-  box-shadow: 0px 8px 16px rgb(160, 160, 160);
-  z-index: 1000;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 8px rgb(221, 221, 221);
+  z-index: 900;
   list-style: none;
   padding-left: 0;
   left: 5px;
-  top: calc(100% + 100px);
-  transition: top 1s;
+  top: calc(100% + 20px);
+  transition: 0.3s;
+  opacity: 0;
 }
 
 .dropdown-content a {
@@ -99,9 +101,15 @@ nav a:hover {
   background-color: transparent;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown:hover > .dropdown-content {
+  opacity: 1;
   top: calc(100% + 10px);
+  visibility: visible;
+}
+
+.dropdown:hover > a {
+  background-color: #64a7c5;
+  color: #1360ca;
 }
 
 /*---------------------------------------------------------- 
@@ -143,18 +151,28 @@ nav a:hover {
 #hero a {
   border: 4px solid white;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   display: block;
   position: relative;
   margin: auto;
+  font-size: 30px;
+  padding: 4px 0;
+  color: white;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+}
+
+#hero a:hover {
+  background-color: rgba(255, 255, 255, 0.144);
+  padding-top: 8px;
 }
 
 #hero i {
-  position: absolute;
-  font-size: 2em;
-  transform: translate(-50%, 50%);
-  color: white;
+  /* position: absolute; */
+  /* font-size: 2em; */
+  /* transform: translate(-50%, 50%); */
+  /* color: white; */
 }
 
 .d-inline-block {
@@ -235,7 +253,34 @@ nav a:hover {
   border-radius: 10px;
   padding: 30px;
   box-shadow: 0px 0px 10px gainsboro;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
+
+#service article::before {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  right: 0;
+  top: 0;
+  background-color: white;
+  z-index: -1;
+  content: "";
+  transition: all 0.3s;
+  border-radius: 10px;
+}
+
+#service article:hover::before {
+  background-color: #3d91b7;
+  color: white;
+  bottom: 0;
+}
+
+#service article:hover,
+#service article:hover i {
+  color: white;
+}
+
 .flex-container {
   display: flex;
   flex-wrap: nowrap;
