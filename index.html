@@ -11,11 +11,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/fontawesome/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Squad Fs-26</title>
   </head>
   <body>
-    <header>
+    <header class="animate__animated animate__slideInDown">
       <h1>SQUADFREE</h1>
       <nav>
         <ul>
@@ -108,8 +112,9 @@
           </div>
         </article>
       </section>
+      <!-- Service Section -->
       <section id="service">
-        <h2>Services</h2>
+        <h2 class="">Services</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
           molestiae veritatis nesciunt velit numquam quos itaque dolorem nobis
@@ -155,7 +160,134 @@
           </article>
         </div>
       </section>
+      <section id="counts">
+        <div>
+          <!-- <div class="arrow-down"></div> -->
+        </div>
+      </section>
+      <section id="teams">
+        <div id="team1" class="team">
+          <img src="img/team/team-1.jpg" alt="team 1" />
+          <div class="description">
+            <h2>Walter White</h2>
+            <em>Chief Executive Officer</em>
+            <div class="social">
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+          </div>
+        </div>
+        <div id="team2" class="team">
+          <img src="img/team/team-2.jpg" alt="team 2" />
+          <div class="description">
+            <h2>Sarah Jhonson</h2>
+            <em>Product Manager</em>
+            <div class="social">
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+          </div>
+        </div>
+        <div id="team3" class="team">
+          <img src="img/team/team-3.jpg" alt="team 3" />
+          <div class="description">
+            <h2>William Anderson</h2>
+            <em>CTO</em>
+            <div class="social">
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section id="contact">
+        <!-- Info section -->
+        <div id="info">
+          <div id="address">
+            <i class="fa-solid fa-location-dot"></i>
+            <address>Our Address</address>
+            <p>A108 Adam Street, New York, NY 535022</p>
+          </div>
+          <div id="email">
+            <i class="fa-solid fa-envelope"></i>
+            <address>Email Us</address>
+            <p>contact@example.com</p>
+          </div>
+
+          <div id="callus">
+            <i class="fa-solid fa-phone-volume"></i>
+            <address>Call Us</address>
+            <p>+1 5589 55488 55</p>
+          </div>
+        </div>
+        <!-- Message Section -->
+        <div id="message">
+          <div class="mapouter w-50">
+            <div class="gmap_canvas">
+              <iframe
+                width="600"
+                height="500"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=3W&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              ></iframe
+              ><a href="https://123movies-to.org">123movies</a><br /><style>
+                .mapouter {
+                  position: relative;
+                  text-align: right;
+                  height: 500px;
+                  width: 600px;
+                }</style
+              ><a href="https://www.embedgooglemap.net">google maps html code</a
+              ><style>
+                .gmap_canvas {
+                  overflow: hidden;
+                  background: none !important;
+                  height: 500px;
+                  width: 600px;
+                }
+              </style>
+            </div>
+          </div>
+          <div id="formulaire">
+            <form>
+              <div>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Your Name"
+                />
+                <input
+                  class="form-control"
+                  type="email"
+                  placeholder="Your Email"
+                />
+              </div>
+
+              <input class="form-control" type="text" placeholder="Subject" />
+              <textarea
+                class="form-control"
+                cols="30"
+                rows="10"
+                placeholder="message"
+              ></textarea>
+              <button>Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
+    <!-- Footer section -->
     <footer>
       <address>
         <h4>Squadfree</h4>

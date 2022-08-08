@@ -161,13 +161,6 @@ nav a:hover {
   background-color: rgba(255, 255, 255, 0.157);
 }
 
-/* #hero i {
-  position: absolute;
-  font-size: 2em;
-  transform: translate(-50%, 50%);
-  color: white;
-} */
-
 .d-inline-block {
   display: inline-block;
   vertical-align: top;
@@ -234,6 +227,9 @@ nav a:hover {
 #service h2 {
   background: url("../img/section-title-bg.png") center no-repeat;
   padding: 20px 0;
+  animation: shakeX;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 #service h2,
@@ -292,7 +288,7 @@ footer {
   background-color: #263f49;
   padding: 40px 100px 20px 100px;
   position: relative;
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 footer address {
@@ -323,4 +319,188 @@ footer address {
   align-items: center;
   text-decoration: none;
   box-shadow: 1px 1px 5px gray;
+}
+
+/* .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+
+  border-top: 20px solid #f00;
+} */
+
+/*------------------------------------------- 
+            team section
+---------------------------------------------*/
+
+#teams {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding-bottom: 100px;
+  color: #317c9e;
+  transition: all 0.3s;
+  padding: 50px 70px;
+}
+.team {
+  position: relative;
+}
+
+#team1 {
+  animation: move-to-top 0.5s ease-in;
+}
+
+#team2 {
+  animation: move-to-top 1s ease-in;
+}
+
+#team3 {
+  animation: move-to-top 1.5s ease-in;
+}
+
+#teams img {
+  width: 350px;
+}
+
+.description {
+  position: absolute;
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0 0 5px lightgray;
+  transform: translateX(12%);
+  top: 80%;
+  padding: 15px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: max-height 0.3s;
+  max-height: 95px;
+  overflow: hidden;
+}
+h2 {
+  font-size: 1.1em;
+  margin: 10px;
+}
+.description h2::after {
+  content: "";
+  display: block;
+  border-bottom: 0.5px solid #3d91b7;
+  width: 25%;
+  margin: 10px auto;
+}
+
+.social {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.team:hover .description {
+  max-height: 150px;
+}
+
+/*------------------------------------------- 
+            contact section
+---------------------------------------------*/
+
+#contact {
+  padding: 50px 70px;
+  background-color: #f4f9fc;
+}
+
+#info {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+#info div {
+  background-color: white;
+  box-shadow: 0 0 5px lightgray;
+  text-align: center;
+  height: 200px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#address {
+  flex-grow: 2;
+}
+
+#info i {
+  font-size: 2.5em;
+  color: #3d91b7;
+  margin-bottom: 20px;
+}
+#info address {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: gray;
+}
+
+#message {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 40px auto;
+}
+
+#formulaire {
+  box-shadow: 0 0 10px lightgray;
+  padding: 40px;
+  background-color: white;
+}
+.w-50 {
+  width: 45%;
+}
+.w-100 {
+  width: 100%;
+}
+.form-control {
+  padding: 10px;
+  font-size: 1.2em;
+  outline: 1px solid gainsboro;
+  border: none;
+  width: 100%;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+form > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.form-control:focus {
+  outline-color: #3d91b7;
+}
+
+form button {
+  background-color: #64a7c5;
+  border: none;
+  color: white;
+  display: block;
+  margin: auto;
+  padding: 20px;
+  font-size: 1.1em;
+}
+
+/*--------------------------------------------
+               Animations 
+---------------------------------------------*/
+@keyframes move-to-top {
+  from {
+    top: 100px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
